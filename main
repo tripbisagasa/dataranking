@@ -1,0 +1,11 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pylab as plt
+import seaborn as sns
+plt.style.use('ggplot')
+#pd.set_option('max_columns', 200)
+
+data1 = pd.read_excel('data_2021.xlsx', sheet_name='Sheet1')
+data2 = pd.read_excel('data_2022.xlsx', sheet_name='Sheet1')
+
+print(data1['Rank'].value_counts().plot(kind='bar'))
